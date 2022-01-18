@@ -24,7 +24,7 @@ func (*server) Greet(ctx context.Context, req *greetpb.GreetRequest) (*greetpb.G
 }
 
 func main() {
-	fmt.Println("Hello")
+	fmt.Println("Server Service Greet Running")
 
 	lis, err:=net.Listen("tcp", "0.0.0.0:50051")  //network string, address
 	if err!= nil {

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package calculator;
+option go_package="./calculator/calpb";
+
+message Calculators {
+  int32 phoneNumber = 1;
+  int32 age = 2;
+}
+
+message CalculatorRequest {
+  Calculators calculators = 1;
+}
+
+message CalculatorResponse {
+  Calculators result = 1;
+}
+
+service CalculatorService {
+  rpc Calcualtor(CalculatorRequest) returns (CalculatorResponse) {} 
+}
